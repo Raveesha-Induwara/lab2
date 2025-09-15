@@ -26,11 +26,9 @@ jobs:
         run: echo ${{ inputs.custom_message }}
 
       - name: Printing run-job boolean value
-        if: (${{ inputs.run-job }} == 'true')
-        run: echo "$RUNJOB"
-        env:
-          RUNJOB: ${{ inputs.run-job }}
-         
+        if: (${{ inputs.run-job }} == true)
+        run: echo ${{ inputs.run-job }}         
+
 
 
 
